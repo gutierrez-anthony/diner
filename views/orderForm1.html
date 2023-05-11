@@ -28,6 +28,11 @@
                         </input>
                     </label><br>
                 </repeat>
+
+                <!-- Display an error if there is one-->
+                <check if="{{ isset@errors['meal']) }}">
+                    <span>{{ @errors['meal'] }}</span>
+                </check>
             </div>
         </div>
 
