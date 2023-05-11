@@ -1,0 +1,40 @@
+<include href="views/includes/header.html"></include>
+<body>
+<div class="container">
+    <h1>The Diner:  Order Form Part 1</h1>
+
+    <form action="#" method="post" class="form-horizontal">
+
+        <!-- get food -->
+        <div class="form-group">
+            <label for="food" class="col-sm-4 control-label">What food would you like to order?</label>
+
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="food" id="food" value="">
+            </div>
+        </div>
+        <br>
+
+        <!-- get meal -->
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Select a meal</label>
+            <div class="col-sm-4">
+                <repeat group="{{ @meals}}" value="{{ @meal }}">
+                    <label><input type="radio"
+                                  name="meal"
+                                  id="{{ @meal }}"
+                                  value="{{ @meal }}"
+                    > {{ ucfirst(@meal) }}
+                        </input>
+                    </label><br>
+                </repeat>
+            </div>
+        </div>
+
+        <div class="col-xs-1 ">
+            <button type="submit">Next >></button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
