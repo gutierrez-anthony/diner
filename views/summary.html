@@ -3,10 +3,14 @@
 <div class="container">
     <h1>Thank you for your order!</h1>
     <h2>Order Summary</h2>
-    <p>You ordered {{ @SESSION.food }} for {{ @SESSION.meal }}<br>
-        Condiments:  {{ @SESSION.condiments }}
-    </p>
-    <p></p>
+    <p>Order ID: {{ @orderId }}</p>
+    <p>You ordered {{ g->getFood() }}
+        for {{ @SESSION.order->getMeal() }}</p>
+    <check if="{{ !empty(@SESSION.order->getCondiments()) }}">
+        <p>Condiments:  {{ @SESSION.order->getCondiments() }}</p>
+    </check>
+
+    <a href="order1">Place another order</a>
 </div>
 
 </body>
