@@ -4,7 +4,7 @@
     <h1>Thank you for your order!</h1>
     <h2>Order Summary</h2>
     <p>Order ID: {{ @orderId }}</p>
-    <p>You ordered {{ g->getFood() }}
+    <p>You ordered {{ @SESSION.order->getFood() }}
         for {{ @SESSION.order->getMeal() }}</p>
     <check if="{{ !empty(@SESSION.order->getCondiments()) }}">
         <p>Condiments:  {{ @SESSION.order->getCondiments() }}</p>

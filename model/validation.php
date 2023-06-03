@@ -25,7 +25,7 @@ class Validate
 
     static function validCondiments($userCondiments)
     {
-        $validCondiments = DataLayer::getCondiments();
+        $validCondiments = DataLayer::getConds();
 
         //Check each user condiment against array of valid condiments
         foreach ($userCondiments as $userCondiment) {
